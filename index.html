@@ -239,6 +239,9 @@
   <!-- Facebook Pixel Code -->
   <script>
     fbq('track', 'PageView');
+
+    setTimeout(function(){ fbq('track', 'ViewContent'); }, 10 * 60 * 1000);
+
   </script>
   <noscript>
     <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=374480197003020&ev=PageView&noscript=1"/>
@@ -415,22 +418,23 @@
   
 </script>
 
-<script type="text/javascript">
-    var value = window.location.search.substring(1);
+  <script type="text/javascript">
+      var value = window.location.search.substring(1);
 
-    var theInstances = document.getElementsByTagName("a");
+      var theInstances = document.getElementsByTagName("a");
 
-    for (var i=0;i<theInstances.length;i++) { 
-      var originalValue = theInstances[i].getAttribute("href");
+      for (var i=0;i<theInstances.length;i++) { 
+        var originalValue = theInstances[i].getAttribute("href");
 
-      var separator = originalValue.includes("?") ? "&" : "?";
-      var url = originalValue + separator + value;
+        var separator = originalValue.includes("?") ? "&" : "?";
+        var url = originalValue + separator + value;
 
-      theInstances[i].setAttribute("href",url);
-    }
+        theInstances[i].setAttribute("href",url);
+      }
 
 
-</script>
+  </script>
+
 
 </body>
 </html>
